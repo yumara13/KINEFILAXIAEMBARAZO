@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f47a20">
-  <meta name="description" content="Guía visual de kinefilaxia en el embarazo: movimiento adaptado, respiración y suelo pélvico.">
+  <meta name="description" content="Guía visual de kinefilaxia en el embarazo: movimiento adaptado, respiración y cuidado del suelo pélvico.">
   <title>Kinefilaxia en el embarazo | TECBA</title>
 
   <style>
@@ -18,9 +18,13 @@
       --soft: #fff0e2;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -31,11 +35,12 @@
     }
 
     .site-header {
-      height: 82px;
-      padding: 0 clamp(22px, 7vw, 108px);
+      min-height: 82px;
+      padding: 10px clamp(18px, 7vw, 108px);
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 12px;
       border-bottom: 1px solid #f2ece7;
     }
 
@@ -48,6 +53,7 @@
     }
 
     .brand-logo {
+      display: block;
       width: 54px;
       height: 54px;
       object-fit: contain;
@@ -60,22 +66,25 @@
       text-transform: uppercase;
     }
 
-    .brand-name strong { font-size: 15px; }
+    .brand-name strong {
+      font-size: 15px;
+    }
 
     .header-tag {
       color: var(--muted);
       font-size: 12px;
       letter-spacing: .08em;
+      text-align: right;
       text-transform: uppercase;
     }
 
     .hero {
-      min-height: 390px;
-      padding: 74px clamp(24px, 11vw, 165px);
       position: relative;
       display: flex;
+      min-height: 390px;
       align-items: center;
       overflow: hidden;
+      padding: 74px clamp(24px, 11vw, 165px);
       background: var(--cream);
     }
 
@@ -85,7 +94,8 @@
       max-width: 650px;
     }
 
-    .eyebrow, .category {
+    .eyebrow,
+    .category {
       color: var(--orange-dark);
       font-size: 11px;
       font-weight: 800;
@@ -200,8 +210,13 @@
       background: #fff;
     }
 
-    .safety-card:first-child { border-radius: 8px 0 0 8px; }
-    .safety-card:last-child { border-radius: 0 8px 8px 0; }
+    .safety-card:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+
+    .safety-card:last-child {
+      border-radius: 0 8px 8px 0;
+    }
 
     .safety-number {
       color: var(--orange);
@@ -264,31 +279,21 @@
 
     .exercise-visual {
       position: relative;
-      display: grid;
-      min-height: 100%;
-      place-items: center;
+      display: flex;
+      min-width: 0;
+      min-height: 320px;
+      align-items: center;
+      justify-content: center;
       overflow: hidden;
       background: var(--soft);
     }
 
     .exercise-visual img {
-      position: absolute;
-      inset: 0;
+      display: block;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-    }
-
-    .image-hint {
-      z-index: 1;
-      max-width: 185px;
-      padding: 10px 14px;
-      border: 1px dashed #dfa477;
-      border-radius: 5px;
-      color: #9a7154;
-      background: #fff9f3d9;
-      font-size: 13px;
-      text-align: center;
+      max-height: 560px;
+      object-fit: contain;
     }
 
     .exercise-index {
@@ -308,7 +313,10 @@
       font-weight: 800;
     }
 
-    .exercise-content { padding: 29px 34px 28px; }
+    .exercise-content {
+      min-width: 0;
+      padding: 29px 34px 28px;
+    }
 
     .exercise-title {
       padding-bottom: 15px;
@@ -331,7 +339,10 @@
       letter-spacing: .04em;
     }
 
-    .rhythm b { padding: 0 5px; color: #e0b496; }
+    .rhythm b {
+      padding: 0 5px;
+      color: #e0b496;
+    }
 
     .purpose {
       margin: 17px 0;
@@ -339,7 +350,9 @@
       font-size: 13px;
     }
 
-    .purpose strong { color: var(--ink); }
+    .purpose strong {
+      color: var(--ink);
+    }
 
     .steps {
       display: grid;
@@ -402,7 +415,10 @@
       font-size: 12px;
     }
 
-    footer p { flex: 1; margin: 0; }
+    footer p {
+      flex: 1;
+      margin: 0;
+    }
 
     .footer-brand {
       color: var(--orange-dark);
@@ -418,39 +434,152 @@
     }
 
     @media (max-width: 760px) {
-      .site-header { height: 72px; padding: 0 20px; }
-      .brand-logo { width: 46px; height: 46px; }
-      .header-tag { max-width: 110px; font-size: 9px; text-align: right; }
-      .hero { min-height: 350px; padding: 60px 25px; }
-      .hero-art { right: -148px; opacity: .42; transform: translateY(-50%) scale(.85); }
-      .hero-copy { max-width: 85%; }
-      .hero-description { font-size: 15px; }
-      .safety { grid-template-columns: 1fr; margin-top: -12px; padding: 0 18px; }
-      .safety-card, .safety-card:first-child, .safety-card:last-child {
+      .site-header {
+        min-height: 72px;
+        padding: 10px 18px;
+        gap: 10px;
+      }
+
+      .brand-logo {
+        width: 44px;
+        height: 44px;
+      }
+
+      .brand-name,
+      .brand-name strong {
+        font-size: 12px;
+      }
+
+      .header-tag {
+        max-width: 120px;
+        font-size: 9px;
+      }
+
+      .hero {
+        min-height: 330px;
+        padding: 52px 22px;
+      }
+
+      .hero-art {
+        right: -190px;
+        opacity: .28;
+        transform: translateY(-50%) scale(.75);
+      }
+
+      .hero-copy {
+        max-width: 100%;
+      }
+
+      .hero-description {
+        max-width: 320px;
+        font-size: 15px;
+      }
+
+      .safety {
+        grid-template-columns: 1fr;
+        margin-top: -12px;
+        padding: 0 16px;
+      }
+
+      .safety-card,
+      .safety-card:first-child,
+      .safety-card:last-child {
         min-height: auto;
-        padding: 18px 20px;
+        padding: 17px 18px;
         border-radius: 0;
         border-bottom: 0;
       }
-      .safety-card:first-child { border-radius: 8px 8px 0 0; }
-      .safety-card:last-child { border-bottom: 1px solid var(--line); border-radius: 0 0 8px 8px; }
-      .exercise-section { padding: 78px 18px; }
-      .section-heading { margin-bottom: 32px; }
-      .exercise-list { gap: 20px; }
-      .exercise-card { grid-template-columns: 1fr; }
-      .exercise-visual { min-height: 235px; }
-      .exercise-content { padding: 23px 20px; }
-      .exercise-title h3 { font-size: 25px; }
-      .steps { gap: 11px 10px; }
-      .steps li { gap: 8px; }
-      .steps p { font-size: 12px; }
-      footer { flex-wrap: wrap; padding: 20px; }
-      footer p { min-width: 65%; }
+
+      .safety-card:first-child {
+        border-radius: 8px 8px 0 0;
+      }
+
+      .safety-card:last-child {
+        border-bottom: 1px solid var(--line);
+        border-radius: 0 0 8px 8px;
+      }
+
+      .exercise-section {
+        padding: 65px 16px;
+      }
+
+      .section-heading {
+        margin-bottom: 30px;
+      }
+
+      .exercise-list {
+        gap: 20px;
+      }
+
+      .exercise-card {
+        grid-template-columns: 1fr;
+      }
+
+      .exercise-visual {
+        width: 100%;
+        min-height: 0;
+        padding: 12px;
+      }
+
+      .exercise-visual img {
+        position: static;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+      }
+
+      .exercise-index {
+        top: 18px;
+        left: 18px;
+      }
+
+      .exercise-content {
+        padding: 22px 18px;
+      }
+
+      .exercise-title h3 {
+        font-size: 24px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .steps li {
+        min-height: auto;
+      }
+
+      .steps p {
+        font-size: 13px;
+      }
+
+      footer {
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+
+      footer p {
+        min-width: 65%;
+      }
     }
 
     @media (max-width: 390px) {
-      .steps { grid-template-columns: 1fr; }
-      .exercise-visual { min-height: 205px; }
+      .header-tag {
+        max-width: 95px;
+        font-size: 8px;
+      }
+
+      .hero {
+        padding-right: 18px;
+        padding-left: 18px;
+      }
+
+      .exercise-content {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
     }
   </style>
 </head>
@@ -472,24 +601,38 @@
         <p class="hero-description">Movimiento adaptado, respiración y cuidado del suelo pélvico.</p>
         <a class="hero-link" href="#ejercicios">Explorar ejercicios <span aria-hidden="true">↓</span></a>
       </div>
+
       <div class="hero-art" aria-hidden="true">
-        <span class="sun"></span><span class="arc arc-one"></span>
-        <span class="arc arc-two"></span><span class="art-dot"></span>
+        <span class="sun"></span>
+        <span class="arc arc-one"></span>
+        <span class="arc arc-two"></span>
+        <span class="art-dot"></span>
       </div>
     </section>
 
     <section class="safety" aria-label="Recomendaciones antes de comenzar">
       <article class="safety-card">
         <span class="safety-number">01</span>
-        <div><h2>Prepara</h2><p>Usa ropa cómoda, calzado estable y un espacio despejado.</p></div>
+        <div>
+          <h2>Prepara</h2>
+          <p>Usa ropa cómoda, calzado estable y un espacio despejado.</p>
+        </div>
       </article>
+
       <article class="safety-card">
         <span class="safety-number">02</span>
-        <div><h2>Respira</h2><p>No aguantes el aire ni hagas fuerza excesiva.</p></div>
+        <div>
+          <h2>Respira</h2>
+          <p>No aguantes el aire ni hagas fuerza excesiva.</p>
+        </div>
       </article>
+
       <article class="safety-card">
         <span class="safety-number">03</span>
-        <div><h2>Adapta</h2><p>Haz los movimientos solo si tu profesional de salud los considera adecuados.</p></div>
+        <div>
+          <h2>Adapta</h2>
+          <p>Haz los movimientos solo si tu profesional de salud los considera adecuados.</p>
+        </div>
       </article>
     </section>
 
@@ -504,7 +647,6 @@
         <article class="exercise-card" id="respiracion">
           <div class="exercise-visual">
             <img src="imagen1.png" alt="Imagen de referencia para la respiración diafragmática" loading="lazy">
-            <span class="image-hint"></span>
             <span class="exercise-index">01</span>
           </div>
           <div class="exercise-content">
@@ -527,7 +669,6 @@
         <article class="exercise-card" id="hombros">
           <div class="exercise-visual">
             <img src="imagen2.png" alt="Imagen de referencia para la movilidad circular de hombros" loading="lazy">
-            <span class="image-hint"></span>
             <span class="exercise-index">02</span>
           </div>
           <div class="exercise-content">
@@ -550,7 +691,6 @@
         <article class="exercise-card" id="tobillos">
           <div class="exercise-visual">
             <img src="imagen3.png" alt="Imagen de referencia para la movilidad de tobillos" loading="lazy">
-            <span class="image-hint"></span>
             <span class="exercise-index">03</span>
           </div>
           <div class="exercise-content">
@@ -573,7 +713,6 @@
         <article class="exercise-card" id="pelvis">
           <div class="exercise-visual">
             <img src="imagen4.png" alt="Imagen de referencia para la basculación pélvica suave" loading="lazy">
-            <span class="image-hint"></span>
             <span class="exercise-index">04</span>
           </div>
           <div class="exercise-content">
