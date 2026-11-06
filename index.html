@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -405,6 +406,41 @@
       text-transform: uppercase;
     }
 
+    /* GALERÍA INFERIOR: TRES CUADRANTES */
+
+    .gallery-section {
+      padding: 40px clamp(20px, 9vw, 130px) 70px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1060px;
+      margin: auto;
+    }
+
+    .gallery-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      height: 280px;
+      padding: 12px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--cream);
+    }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
     footer {
       display: flex;
       align-items: center;
@@ -432,6 +468,8 @@
       font-weight: 700;
       text-decoration: none;
     }
+
+    /* DISEÑO RESPONSIVE */
 
     @media (max-width: 760px) {
       .site-header {
@@ -555,6 +593,21 @@
         font-size: 13px;
       }
 
+      /* Galería en celulares */
+
+      .gallery-section {
+        padding: 30px 16px 50px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .gallery-item {
+        height: 260px;
+      }
+
       footer {
         flex-wrap: wrap;
         padding: 20px;
@@ -581,10 +634,12 @@
         padding-left: 15px;
       }
     }
+
   </style>
 </head>
 
 <body>
+
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Inicio - Tecnológico Boliviano Alemán">
       <img class="brand-logo" src="tecba.png" alt="Logo del Tecnológico Boliviano Alemán">
@@ -594,6 +649,7 @@
   </header>
 
   <main id="inicio">
+
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">GUÍA VISUAL · EMBARAZO</p>
@@ -611,6 +667,7 @@
     </section>
 
     <section class="safety" aria-label="Recomendaciones antes de comenzar">
+
       <article class="safety-card">
         <span class="safety-number">01</span>
         <div>
@@ -634,9 +691,11 @@
           <p>Haz los movimientos solo si tu profesional de salud los considera adecuados.</p>
         </div>
       </article>
+
     </section>
 
     <section class="exercise-section" id="ejercicios">
+
       <div class="section-heading">
         <p class="eyebrow">MOVIMIENTOS SUAVES Y CONSCIENTES</p>
         <h2>Tu guía, paso a paso</h2>
@@ -644,101 +703,130 @@
       </div>
 
       <div class="exercise-list">
+
+        <!-- EJERCICIO 1 -->
+
         <article class="exercise-card" id="respiracion">
           <div class="exercise-visual">
             <img src="imagen1.png" alt="Imagen de referencia para la respiración diafragmática" loading="lazy">
             <span class="exercise-index">01</span>
           </div>
+
           <div class="exercise-content">
             <div class="exercise-title">
               <span class="category">RESPIRA · PASO A PASO</span>
               <h3>Respiración diafragmática</h3>
               <p class="rhythm">Inhala suave <b>·</b> exhala lento</p>
             </div>
+
             <p class="purpose"><strong>¿Para qué?</strong> Favorecer una respiración tranquila. Prueba 5 respiraciones cómodas.</p>
+
             <ol class="steps">
               <li><span>1</span><p>Siéntate cómoda con la espalda apoyada.</p></li>
               <li><span>2</span><p>Pon una mano en el pecho y otra en el abdomen.</p></li>
               <li><span>3</span><p>Inhala suave por la nariz; deja que se mueva el abdomen.</p></li>
               <li><span>4</span><p>Exhala lentamente sin apretar ni aguantar el aire.</p></li>
             </ol>
+
             <p class="remember"><strong>Recuerda</strong> Hombros relajados y sin forzar el aire. Si causa dolor, detente.</p>
           </div>
         </article>
+
+        <!-- EJERCICIO 2 -->
 
         <article class="exercise-card" id="hombros">
           <div class="exercise-visual">
             <img src="imagen2.png" alt="Imagen de referencia para la movilidad circular de hombros" loading="lazy">
             <span class="exercise-index">02</span>
           </div>
+
           <div class="exercise-content">
             <div class="exercise-title">
               <span class="category">MOVILIDAD · PASO A PASO</span>
               <h3>Movilidad circular de hombros</h3>
               <p class="rhythm">Círculos <b>·</b> lentos</p>
             </div>
+
             <p class="purpose"><strong>¿Para qué?</strong> Soltar suavemente la zona de los hombros. Haz 5 círculos en cada dirección.</p>
+
             <ol class="steps">
               <li><span>1</span><p>Siéntate o ponte de pie con una postura cómoda.</p></li>
               <li><span>2</span><p>Haz círculos lentos con ambos hombros hacia delante.</p></li>
               <li><span>3</span><p>Repite el movimiento hacia atrás.</p></li>
               <li><span>4</span><p>Mantén el cuello relajado y respira.</p></li>
             </ol>
+
             <p class="remember"><strong>Recuerda</strong> Haz círculos pequeños y sin dolor. Si causa dolor, detente.</p>
           </div>
         </article>
+
+        <!-- EJERCICIO 3 -->
 
         <article class="exercise-card" id="tobillos">
           <div class="exercise-visual">
             <img src="imagen4.png" alt="Imagen de referencia para la movilidad de tobillos" loading="lazy">
             <span class="exercise-index">03</span>
           </div>
+
           <div class="exercise-content">
             <div class="exercise-title">
               <span class="category">CIRCULACIÓN · PASO A PASO</span>
               <h3>Movilidad de tobillos</h3>
               <p class="rhythm">Gira <b>·</b> cada tobillo</p>
             </div>
+
             <p class="purpose"><strong>¿Para qué?</strong> Mover los tobillos con suavidad. Haz 5 círculos por sentido y por pie.</p>
+
             <ol class="steps">
               <li><span>1</span><p>Siéntate con los pies apoyados o las piernas cómodas.</p></li>
               <li><span>2</span><p>Eleva un poco un pie si te resulta cómodo.</p></li>
               <li><span>3</span><p>Haz círculos lentos con el tobillo.</p></li>
               <li><span>4</span><p>Cambia de sentido y repite con el otro pie.</p></li>
             </ol>
+
             <p class="remember"><strong>Recuerda</strong> No fuerces el rango de movimiento. Si causa dolor, detente.</p>
           </div>
         </article>
+
+        <!-- EJERCICIO 4 -->
 
         <article class="exercise-card" id="pelvis">
           <div class="exercise-visual">
             <img src="imagen3.png" alt="Imagen de referencia para la basculación pélvica suave" loading="lazy">
             <span class="exercise-index">04</span>
           </div>
+
           <div class="exercise-content">
             <div class="exercise-title">
               <span class="category">PELVIS · PASO A PASO</span>
               <h3>Basculación pélvica suave</h3>
               <p class="rhythm">Pelvis <b>·</b> hacia delante y atrás</p>
             </div>
+
             <p class="purpose"><strong>¿Para qué?</strong> Practicar un movimiento pélvico pequeño y controlado. Haz 6–8 repeticiones tranquilas.</p>
+
             <ol class="steps">
               <li><span>1</span><p>Ponte de pie con los pies separados al ancho de las caderas y apoyo estable.</p></li>
               <li><span>2</span><p>Flexiona un poquito las rodillas si te resulta cómodo.</p></li>
               <li><span>3</span><p>Inclina suavemente la pelvis hacia delante y después hacia atrás.</p></li>
               <li><span>4</span><p>Vuelve al centro; no arquees ni fuerces la espalda.</p></li>
             </ol>
+
             <p class="remember"><strong>Recuerda</strong> Movimiento corto y sin dolor. Si causa dolor, detente.</p>
           </div>
         </article>
+
       </div>
     </section>
-     <section class="gallery-section" aria-label="Galería de imágenes complementarias">
+
+    <!-- NUEVA SECCIÓN: TRES IMÁGENES INFERIORES -->
+
+    <section class="gallery-section" aria-label="Galería de imágenes complementarias">
 
       <div class="gallery-grid">
 
         <div class="gallery-item">
-          <img src="IMAGEN5.jpeg" alt="Imagen complementaria 6" loading="lazy">
+          <img src="IMAGEN6.jpeg" alt="Imagen complementaria 6" loading="lazy">
         </div>
 
         <div class="gallery-item">
@@ -746,12 +834,13 @@
         </div>
 
         <div class="gallery-item">
-          <img src="iMAGEN8.jpeg" alt="Imagen complementaria 8" loading="lazy">
+          <img src="IMAGEN8.jpeg" alt="Imagen complementaria 8" loading="lazy">
         </div>
 
       </div>
 
     </section>
+
   </main>
 
   <footer>
@@ -759,5 +848,6 @@
     <p>Guía visual de kinefilaxia en el embarazo</p>
     <a href="#inicio">Volver arriba ↑</a>
   </footer>
+
 </body>
 </html>
